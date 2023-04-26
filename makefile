@@ -1,15 +1,15 @@
 all: remote
 
-OUTPUT_NAME=wifilib
+OUTPUT_NAME=i2c
 COMPILER=g++
-CONFIG=`pkg-config --cflags --libs glib-2.0 libnm`
+CONFIG=
 BUILD=$(COMPILER) $^ $(CONFIG) -o $(OUTPUT_NAME)
 
-local: WirelessConnectionManager.cpp wifiobj.cpp
+local: i2c.cpp main.cpp
 		make clean
 		$(BUILD)
 
-remote: WirelessConnectionManager.cpp wifiobj.cpp
+remote: i2c.cpp main.cpp
 		make clean
 		git pull
 		$(BUILD)
