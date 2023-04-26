@@ -5,11 +5,11 @@ COMPILER=g++
 CONFIG=
 BUILD=$(COMPILER) $^ $(CONFIG) -o $(OUTPUT_NAME)
 
-local: i2c.cpp main.cpp
+local: i2c.cpp
 		make clean
 		$(BUILD)
 
-remote: i2c.cpp main.cpp
+remote: i2c.cpp
 		make clean
 		git pull
 		$(BUILD)
