@@ -8,7 +8,4 @@ class I2C
                 int closeFile();
                 int sendFile(char *buffer, int num);
                 int readFile(unsigned char *buffer, int num);
-
-                I2C();
-                ~I2C();
 };
