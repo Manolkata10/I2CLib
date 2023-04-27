@@ -46,13 +46,3 @@ int I2C::readFile(unsigned char *buffer, int num)
 
         return 0;
 }
-
-I2C::I2C()
-{
-        openFile(0x58);
-}
-
-I2C::~I2C()
-{
-        closeFile();
-}
